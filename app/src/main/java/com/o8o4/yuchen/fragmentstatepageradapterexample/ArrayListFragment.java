@@ -9,6 +9,7 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 public class ArrayListFragment extends ListFragment {
     int mNum;
@@ -62,6 +63,8 @@ public class ArrayListFragment extends ListFragment {
 
     @Override
     public void onListItemClick(ListView l, View v, int position, long id) {
+
+        Toast.makeText(v.getContext(), "clicked: " + id + "" + cheeses[position], Toast.LENGTH_SHORT).show();
         Log.i("FragmentList", "Item clicked: " + id);
     }
 }
